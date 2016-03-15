@@ -60,6 +60,40 @@ public function setUp() {
   }
 ```
 
+At this point you should be ready to start writing the individual tests of the test case. there are simply standard public functions prefaced by the word 'test' Ex. `public function testFunction()`
+
+At this point you should be setup with a bare bones test case that looks somthing like this.
+
+```
+class TestTests extends DrupalWebTestCase {
+  /**
+   * Metadata about our test case.
+   */
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Aoda Test: Test',
+      'description' => 'Tests for the Aoda Test Module',
+      'group' => 'Aoda Test: Test',
+    );
+  }
+
+  /**
+   * Perform any setup tasks for our test case.
+   */
+
+  public function setUp() {
+    parent::setUp(array('aodatest'));
+  }
+
+  public function testAodaTest() {
+    $this->drupalGet('');
+    $this->assertText('Aoda Test', 'The link is present.');
+    $this->clickLink('Aoda Test');
+    $this->assertText('This is a test to demonstrate the basic functionallity of the Drupal Testing Module.', 'The page content is present.');
+  }
+}
+```
 
 ## Running Tests
 ### Browser
