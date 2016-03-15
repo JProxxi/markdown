@@ -96,4 +96,5 @@ If we navigate to 'Configuration > Testing' we should be able to find our newly 
 ### Command Line
 We can run our newly created test by using the `run-test.sh` script found at `/var/www/html/<yourSite>/scripts` (This must be run from your sites main directory)
 Ex. `php scripts/run-tests.sh --verbose 'Some Group'` . More information on how to use `run-tests.sh` can be obtained by simply running the script with no arguments `php scripts/run-tests.sh`
-### Failing Tests
+
+## Useful Bits Of Code :D
