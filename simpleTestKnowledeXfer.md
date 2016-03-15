@@ -20,7 +20,6 @@ A Test Case is the set of conditions and environment variables under which a tes
 A Test checks one discreet piece of functionality of the system. This is done by preforming the necessary actions using various pre-defined methods for navigating and manipulating Drupal, and then verifying the results using Assertions.
 ### Assertions
 Assertions are the smallest unit of a test and simply tests whether or not a given condition is true or false.
-#### Basic Assertions
 ##### Checking the value of something
 - assertTrue
 - assertFalse
