@@ -64,7 +64,7 @@ At this point you should be ready to start writing the individual tests of the t
 
 At this point you should be setup with a bare bones test case that looks somthing like this.
 
-```
+```php
 class TestTests extends DrupalWebTestCase {
   /**
    * Metadata about our test case.
