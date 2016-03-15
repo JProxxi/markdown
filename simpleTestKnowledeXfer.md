@@ -134,4 +134,8 @@ We can run our newly created test by using the `run-test.sh` script found at `/v
 Ex. `php scripts/run-tests.sh --verbose 'Some Group'` . More information on how to use `run-tests.sh` can be obtained by simply running the script with no arguments `php scripts/run-tests.sh`
 
 ## Useful Bits Of Code :D
-- $this->drupalGet(''); Navigates
+- `$this->drupalGet(''); Navigates`
+- `$this->clickLink('');`
+- `$new_user = $this->drupalCreateUser(array('administer site configuration'));`
+- `$new_user = $this->drupalLogin($new_user);`
+- `$this->drupalLogout();`
