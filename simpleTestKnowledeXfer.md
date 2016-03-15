@@ -84,7 +84,7 @@ class SomeModuleTests extends DrupalWebTestCase {
     parent::setUp(array('somemodule'));
   }
 
-  public function testSomthing() {
+  public function testSomething() {
     $this->drupalGet('');     //Navigates to the home page
   }
 }
