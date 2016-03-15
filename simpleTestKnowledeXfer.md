@@ -31,28 +31,30 @@ Assertions are the smallest unit of a test and simply tests whether or not a giv
 - assertIdentical
 - assertNotIdentical
 ##### Checking for the presence of something
-assertPattern
-assertNoPattern
-assertRaw
-assertNoRaw
-assertText
-assertNoText
-assertTitle
-assertNoTitle
-assertUniqueText
-assertNoUniqueText
-assertLink
-assertNoLink
-assertResponse
-Checking form elements
-assertFieldById
-assertNoFieldById
-assertFieldByName
-assertNoFieldByName
-assertFieldChecked
-assertNoFieldChecked
-assertOptionSelected
-assertNoOptionSelected[[...]](https://www.drupal.org/node/265828)
+- assertPattern
+- assertNoPattern
+- assertRaw
+- assertNoRaw
+- assertText
+- assertNoText
+- assertTitle
+- assertNoTitle
+- assertUniqueText
+- assertNoUniqueText
+- assertLink
+- assertNoLink
+- assertResponse
+##### Checking form elements
+- assertFieldById
+- assertNoFieldById
+- assertFieldByName
+- assertNoFieldByName
+- assertFieldChecked
+- assertNoFieldChecked
+- assertOptionSelected
+- assertNoOptionSelected
+
+[[...]](https://www.drupal.org/node/265828)
 ## How it Works
 Simpletest creates a complete Drupal installation and a virtual web browser and then uses the virtual web browser to walk the Drupal install through a series of tests, just like you would do if you were doing it by hand.
 
