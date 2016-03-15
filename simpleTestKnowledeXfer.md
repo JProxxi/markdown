@@ -30,6 +30,7 @@ Assertions are the smallest unit of a test and simply tests whether or not a giv
 - assertNotEqual
 - assertIdentical
 - assertNotIdentical
+
 ##### Checking for the presence of something
 - assertPattern
 - assertNoPattern
@@ -44,6 +45,7 @@ Assertions are the smallest unit of a test and simply tests whether or not a giv
 - assertLink
 - assertNoLink
 - assertResponse
+
 ##### Checking form elements
 - assertFieldById
 - assertNoFieldById
