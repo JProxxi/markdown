@@ -19,7 +19,40 @@ A Test Case is the set of conditions and environment variables under which a tes
 ### Test
 A Test checks one discreet piece of functionality of the system. This is done by preforming the necessary actions using various pre-defined methods for navigating and manipulating Drupal, and then verifying the results using Assertions.
 ### Assertions
-Assertions are the smallest unit of a test and simply tests whether or not a given condition is true or false. [[...]](https://www.drupal.org/node/265828)
+Assertions are the smallest unit of a test and simply tests whether or not a given condition is true or false.
+#### Basic Assertions
+##### Checking the value of something
+- assertTrue
+- assertFalse
+- assertNull
+- assertNotNull
+- assertEqual
+- assertNotEqual
+- assertIdentical
+- assertNotIdentical
+##### Checking for the presence of something
+assertPattern
+assertNoPattern
+assertRaw
+assertNoRaw
+assertText
+assertNoText
+assertTitle
+assertNoTitle
+assertUniqueText
+assertNoUniqueText
+assertLink
+assertNoLink
+assertResponse
+Checking form elements
+assertFieldById
+assertNoFieldById
+assertFieldByName
+assertNoFieldByName
+assertFieldChecked
+assertNoFieldChecked
+assertOptionSelected
+assertNoOptionSelected[[...]](https://www.drupal.org/node/265828)
 ## How it Works
 Simpletest creates a complete Drupal installation and a virtual web browser and then uses the virtual web browser to walk the Drupal install through a series of tests, just like you would do if you were doing it by hand.
 
@@ -98,3 +131,4 @@ We can run our newly created test by using the `run-test.sh` script found at `/v
 Ex. `php scripts/run-tests.sh --verbose 'Some Group'` . More information on how to use `run-tests.sh` can be obtained by simply running the script with no arguments `php scripts/run-tests.sh`
 
 ## Useful Bits Of Code :D
+- $this->drupalGet(''); Navigates
