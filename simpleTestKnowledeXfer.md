@@ -44,7 +44,7 @@ Each `.test` file is composed of 1 or more Drupal Test Case Classes which all ex
 class TestTests extends DrupalWebTestCase{}
 ```
 At this point there are a few things that need to be taken care of before actual test writing begins. First you should declare the Classes `getInfo()` function. This gives Drupal information about your tests that will be displayed in the test list.
-```
+```php
 public static function getInfo() {
     return array(
       'name' => 'Some Name',
@@ -54,7 +54,7 @@ public static function getInfo() {
   }
 ```
 Next you need to define the `setUp()` function for your test case. This method will vary in complexity, but it's general purpose is to prepare the new Drupal installation (created by the test) for the upcoming tests by changing any necessary settings and enabling any needed modules. For example if your were testing the some custom module named `aodatest` you would need to enable it during the setup like so:
-```
+```php
 public function setUp() {
     parent::setUp(array('aodatest'));
   }
