@@ -41,7 +41,7 @@ The `.test` file is the test file for our module and is where all of the tests c
 ### Code
 Each `.test` file is composed of 1 or more Drupal Test Case Classes which all extend either `DrupalWebTestCase` (Functional Tests) or `DrupalUnitTestCase` (Unit Tests). For now we will be focusing on `DrupalWebTestCase`. You can declare your class like so:
 ```
-class TestTests extends DrupalWebTestCase{}
+class SomeModuleTests extends DrupalWebTestCase{}
 ```
 At this point there are a few things that need to be taken care of before actual test writing begins. First you should declare the Classes `getInfo()` function. This gives Drupal information about your tests that will be displayed in the test list.
 ```php
@@ -53,44 +53,39 @@ public static function getInfo() {
     );
   }
 ```
-Next you need to define the `setUp()` function for your test case. This method will vary in complexity, but it's general purpose is to prepare the new Drupal installation (created by the test) for the upcoming tests by changing any necessary settings and enabling any needed modules. For example if your were testing the some custom module named `aodatest` you would need to enable it during the setup like so:
+Next you need to define the `setUp()` function for your test case. This method will vary in complexity, but it's general purpose is to prepare the new Drupal installation (created by the test) for the upcoming tests by changing any necessary settings and enabling any needed modules. For example if your were testing the some custom module named `somemodule` you would need to enable it during the setup like so:
 ```php
 public function setUp() {
-    parent::setUp(array('aodatest'));
+    parent::setUp(array('somemodule'));
   }
 ```
 
 At this point you should be ready to start writing the individual tests of the test case. there are simply standard public functions prefaced by the word 'test' Ex. `public function testFunction()`
 
-At this point you should be setup with a bare bones test case that looks somthing like this.
+At this point you should be setup with a bare bones test case that looks something like this.
 
 ```php
-class TestTests extends DrupalWebTestCase {
+class SomeModuleTests extends DrupalWebTestCase {
   /**
    * Metadata about our test case.
    */
-
   public static function getInfo() {
     return array(
-      'name' => 'Aoda Test: Test',
-      'description' => 'Tests for the Aoda Test Module',
-      'group' => 'Aoda Test: Test',
+      'name' => 'Some Name',
+      'description' => 'Some Description',
+      'group' => 'Some Group',
     );
   }
 
   /**
    * Perform any setup tasks for our test case.
    */
-
   public function setUp() {
-    parent::setUp(array('aodatest'));
+    parent::setUp(array('somemodule'));
   }
 
-  public function testAodaTest() {
-    $this->drupalGet('');
-    $this->assertText('Aoda Test', 'The link is present.');
-    $this->clickLink('Aoda Test');
-    $this->assertText('This is a test to demonstrate the basic functionallity of the Drupal Testing Module.', 'The page content is present.');
+  public function testSomthing() {
+    $this->drupalGet('');     //Navigates to the home page
   }
 }
 ```
