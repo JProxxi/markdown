@@ -89,8 +89,11 @@ class SomeModuleTests extends DrupalWebTestCase {
   }
 }
 ```
-
 ## Running Tests
+Now that are test has been written we need to 'Clear all Caches' so that our Drupal installation can find them. This is done by going to 'Configuration > Performance' and hitting the 'Clear all Caches' button, or using the `drush cc` command. Once that is done we are ready to run our tests.
 ### Browser
+If we navigate to 'Configuration > Testing' we should be able to find our newly written test in the list. we can run it by simply selecting the check box and hitting Run.
 ### Command Line
+We can run our newly created test by using the `run-test.sh` script found at `/var/www/html/<yourSite>/scripts` (This must be run from your sites main directory)
+Ex. `php scripts/run-tests.sh --verbose 'Some Group'`
 ### Failing Tests
